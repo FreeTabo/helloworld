@@ -12,7 +12,7 @@
  <script type="text/javascript">
 window.onload = function(){
   alert("这是个sm的故事游戏……");
-  do{ans1 = prompt("你要玩么(在游戏中的对话框可以随时取消退出游戏)","要！");
+  do{ans1 = prompt("你要玩么(在游戏中的对话框可以随时取消退出游戏，游戏中选择不存在的选项会默认为第一个选项)","要！");
     if(ans1 != "要！" && ans1 !=null){
 		alert("我们要按照对话内容进行游戏~");
 	}
@@ -22,23 +22,54 @@ window.onload = function(){
 	}
  }while(ans1 != "要！")
  
- ans2 = prompt("那在游戏开始之前，文先生您希望您的仆人称呼您为什么呢？"," ");
+ ans2 = prompt("那在游戏开始之前，文先生您希望您的仆人称呼您为什么呢？","");
  if(ans2 == null){
 		alert("我会想你的~白白~");
 		return;
 	}
  alert("好的，"+ans2);
- ans3 = prompt(ans2+"您希望您的仆人叫什么呢？"," ");
+ ans3 = prompt(ans2+"您希望您的仆人叫什么呢？","");
  if(ans3 == null){
 		alert("我会想你的~白白~");
 		return;
 	}
+do{
  ans4 = prompt("您希望您的仆人是什么样的：\n 1、被毒枭抓住的警察。\n 2、有着把柄的健身教练。\n 3、喝醉了的憨厚直熊。","1");
  if(ans4 == null){
 		alert("我会想你的~白白~");
 		return;
 	}
- alert("好的"+ans2+"，您的仆人"+ans3+"已经在房间里等你了……");
+ var flag = 0;
+ 
+ if(ans4 == 1){
+	alert("好的"+ans2+"，您的仆人"+ans3+"已经在房间里等你了……");
+	alert("你打开门走了进去。");
+	alert(1);
+ 
+ 
+ }else if(ans4 == 2){
+	alert("好的"+ans2+"，您的仆人"+ans3+"已经在房间里等你了……");
+	alert("你打开门走了进去。");
+	alert(2);
+ }else if(ans4 == 3){
+	alert("好的"+ans2+"，您的仆人"+ans3+"已经在房间里等你了……");
+	alert("你打开门走了进去。");
+	alert("一只满身酒气的醉熊躺在床上，穿着蓝色短裤和白色的背心……");
+	alert("你走近他，他满脸青色刮干净的胡子，圆圆的脸，闭着眼睛，却有着很浓的眉毛……");
+	ans5 = prompt("1、脱掉他衣服。\n 2、先这样玩着。","");
+	if(ans5 == null){
+		alert("我会想你的~白白~");
+		return;
+	}else if(ans5 == 2){
+		
+	}else{
+		
+	}
+ }else{
+	alert("没有你这个选项哦");
+	flag = 1;
+ }
+ }while(flag != 0)
  alert("那我开始了！");
  alert(" 在一个阴暗潮湿的地下室里……");
  alert("传来一个男人的喘息声……");
